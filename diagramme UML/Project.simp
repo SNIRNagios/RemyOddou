@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="8.4" multi-file="no">
+  <meta>
+    <name>Project</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>2</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type stereotype="" type="UmlClass" />
+        <value>3</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlAssociation" />
+        <value>7</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="UmlGeneralization" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="AbstractElementGroup" />
+        <value>29</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>11</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>6</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management>
+    <persons>
+      <person id="Pfe76389f5ed244d088ceb2193a47550e">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <glossary />
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="QFile" tid="" name="QFile" description="" nullable="false" />
+      <type id="QString" tid="" name="QString" description="" nullable="false" />
+      <type id="QVector &lt;QString&gt;" tid="" name="QVector &lt;QString&gt;" description="" nullable="false" />
+      <type id="void" tid="" name="void" description="" nullable="false" />
+      <type id="Class:di700586664433756831" tid="" name="Configurateur" description="" nullable="false" class-ref="di700586664433756831" />
+    </custom-types>
+  </types>
+  <filters />
+  <items />
+  <models>
+    <model id="p2320f6418d0c439b891d9acfc62c8e35_708353929" name="Model 1" type="model" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>02/29/2016 19:18:09</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p925ed670ed9142cfad7f1244be1173ae_352519709" name="ClassDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="-56,0">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>02/29/2016 19:18:09</creation-date>
+          <change-date>02/29/2016 20:36:42</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di700586664433756831" cid="C001" type="class" name="Configurateur" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creator="Pfe76389f5ed244d088ceb2193a47550e" creation-date="02/29/2016 19:18:15">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <attributes>
+              <attribute id="a3bd29b7174ec4f0b8f755eecfaffeeed164" cid="AT001" name="*fichier" type="QFile" type-id="QFile" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a32d7c58bfca84e6285bd60b8a6cd40f7837" cid="AT002" name="nomFichier" type="QString" type-id="QString" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="adb390c4647564fc285209fcde717c2b4944" cid="AT003" name="vectorSite" type="QVector &lt;QString&gt;" type-id="QVector &lt;QString&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a5f6dcc13a22d46219e6c229e465c2709943" cid="AT007" name="vectorAdresse" type="QVector &lt;QString&gt;" type-id="QVector &lt;QString&gt;" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7b713aa685d643c08674fdce2fd4206b323" cid="AT008" name="nomSite_Lu" type="QString" type-id="QString" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a36258ee4b7864ae9a48f45c179d84d42871" cid="AT009" name="adresse_Lue" type="QString" type-id="QString" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ac278e360cb4240e8ae87978188fcd050370" cid="AT010" name="*configurateur" type="Configurateur" type-id="Class:di700586664433756831" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="obf8894c23ad047be8c255f7466fad710392" cid="OP001" name="add" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p4561576da91b43439f8470df28a92ace" name="QString nomSite" type="" type-id="" />
+                  <parameter id="p212d96ef7ba4466f9c13229aa7f2e6d7" name="QString adresseIP" type="" type-id="" />
+                </parameters>
+                <source-codes />
+              </operation>
+              <operation id="oae7bfc42f35d40ddb3ee3be26a01c326813" cid="OP002" name="edit" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <source-codes />
+              </operation>
+            </operations>
+            <template-parameters>
+              <source-codes />
+            </template-parameters>
+          </item>
+          <item id="di327655917941309143" cid="C002" type="class" name="FEN_Configurateur" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creator="Pfe76389f5ed244d088ceb2193a47550e" creation-date="02/29/2016 19:18:16">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <attributes>
+              <attribute id="a49c0a65cef3f4ef1a8a124759c6c682a249" cid="AT004" name="nomSite_Saisie" type="QString" type-id="QString" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aa23861c67ee647168a15e5d05d686f81563" cid="AT005" name="adresse_Saisie" type="QString" type-id="QString" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o15c90b271eb744d485765a04065e130732" cid="OP003" name="on_PB_valider_clicked" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <source-codes />
+              </operation>
+              <operation id="o83b3db2b8e8841fc912bc29c4c649f56661" cid="OP005" name="on_PB_annuler_clicked" type="void" type-id="void" visibility="public">
+                <style class="default" />
+                <source-codes />
+              </operation>
+            </operations>
+            <template-parameters>
+              <source-codes />
+            </template-parameters>
+          </item>
+          <item id="di787647451402251598" cid="REL006" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" visibility="package" creator="Pfe76389f5ed244d088ceb2193a47550e" creation-date="02/29/2016 20:36:42">
+            <stereotypes />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <relation from="di327655917941309143" to="di700586664433756831">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di700586664433756831" iid="0ef2149be86445e9aa9ba72f132e144a" creation-date="02/29/2016 19:18:15" order-index="0" type="entity">
+            <layout ax="443" ay="101" awidth="356" aheight="202" x="443" y="101" width="356" height="202" angle="0" />
+            <class />
+          </item>
+          <item id="di327655917941309143" iid="eae15d4e16264bc5bc7c6f5683234ada" creation-date="02/29/2016 19:18:16" order-index="1" type="entity">
+            <layout ax="21" ay="227" awidth="252" aheight="117" x="21" y="227" width="252" height="117" angle="0" />
+            <class />
+          </item>
+          <item id="di787647451402251598" iid="c22751b6c8f541feb378afa003491eb3" creation-date="02/29/2016 20:36:42" order-index="2" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" name-position="45,126" auto-path="" x1="273" y1="240" x2="443" y2="150" start-border-pos="0.278124999254942" end-border-pos="0.939189189189189" name-width="304">
+              <points>
+                <point x="273" y="240" />
+                <point x="325" y="214" />
+                <point x="443" y="150" />
+              </points>
+            </layout>
+            <relation from="di327655917941309143" from-iid="eae15d4e16264bc5bc7c6f5683234ada" to="di700586664433756831" to-iid="0ef2149be86445e9aa9ba72f132e144a" to-field="a3bd29b7174ec4f0b8f755eecfaffeeed164" />
+            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+  <documents />
+  <document-templates />
+</sim-project>
