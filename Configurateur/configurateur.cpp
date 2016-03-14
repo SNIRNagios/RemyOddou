@@ -5,7 +5,7 @@ Configurateur::Configurateur(QObject *parent) : QObject(parent)
 
 }
 
-void Configurateur::Add(QString nomSite, QString adresseIP)
+void Configurateur::Add(QString nom, QString ip)
 {
 
     //Lecture du fichier XML
@@ -20,9 +20,6 @@ void Configurateur::Add(QString nomSite, QString adresseIP)
       //Ouverture du fichier et choix du mode d'ouverture
       if (fichier->open(QFile::ReadOnly | QFile::Text)) // Ouverture du fichier XML en lecture seule et en mode texte
       {
-        //mettre un if
-
-
 
       reader.setDevice(fichier); // Initialise l'instance reader avec le flux XML venant de file
 
@@ -44,50 +41,32 @@ void Configurateur::Add(QString nomSite, QString adresseIP)
                       // Tant que celui-ci n'est pas un élément de départ on avance au jeton suivant
                       //while(reader.isStartElement()==false)
                           //reader.readNext();
-
                   }
 
                   if(reader.name() == "collecteur")
                   {
-
                         k++;
                         id = reader.attributes().value("id").toString();
                         vectorId.append(id);
 
-                        nomSite_Lu = reader.attributes().value("nom").toString();
-                        vectorSite.append(nomSite_Lu);
+                        nomLu = reader.attributes().value("nom").toString();
+                        vectorSite.append(nomLu);
 
-                        adresse_Lue = reader.attributes().value("adresse").toString();
-                        vectorAdresse.append(adresse_Lue);
+                        ipLue = reader.attributes().value("ip").toString();
+                        vectorAdresse.append(ipLue);
 
                    }
-
-
-
-
           }
           reader.readNext(); // On va au prochain token
-
         }
-
-
-
-
 
       fichier->close();
-        }
-
-
-
-   // ui->afficher->setText(vectorSite[1]+vectorAdresse[1]);
+      }
 
     // QString::number(k);
-     vectorAdresse.append(adresseIP);
-     vectorSite.append(nomSite);
+     vectorAdresse.append(ip);
+     vectorSite.append(nom);
      vectorId.append(QString::number(k));
-
-
-
 
     // Création et ouverture du fichier XML ou seulement ouverture du fichier XML si le fichier existe déjà
     // Ouverture du fichier en écriture et en texte.
@@ -113,18 +92,13 @@ void Configurateur::Add(QString nomSite, QString adresseIP)
 
          writer.writeAttribute("id",vectorId[i]);//Ajoute un attribut à l'élément collecteur
          writer.writeAttribute("nom",vectorSite[i]);//Ajoute un nouvel attribut à l'élément collecteur
-         writer.writeAttribute("adresse",vectorAdresse[i]);//Ajoute un autre attribut à l'élément collecteur
+         writer.writeAttribute("ip",vectorAdresse[i]);//Ajoute un autre attribut à l'élément collecteur
 
          writer.writeEndElement();//</collecteur>
-
-
  /*
-         <Superviseur>
-             <SiteDistant>
-                 <site>variable</site>
-                 <adresseIP>variable</adresseIP>
-             </SiteDistant>
-         </Superviseur>
+         <Configuration>
+             <collecteur id="1" nom="local" ip="127.0.0.1"/>
+         </Configuration>
  */
 
      }

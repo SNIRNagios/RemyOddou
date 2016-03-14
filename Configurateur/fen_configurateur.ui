@@ -6,19 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>269</height>
+    <width>850</width>
+    <height>250</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>850</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>850</width>
+    <height>250</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Fenêtre - Gestion du fichier de configuration</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="QL_adresseIP">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>120</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -38,8 +53,8 @@
    <widget class="QPushButton" name="PB_annuler">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>200</y>
+      <x>20</x>
+      <y>180</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -69,11 +84,11 @@
      <string>Nom du site</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="PB_valider">
+   <widget class="QPushButton" name="PB_sauvegarder">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>200</y>
+      <x>310</x>
+      <y>180</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -104,44 +119,177 @@
      <string>Sauvegarder la configuration d'un nouveau collecteur</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LE_adresseIP">
+   <widget class="QLineEdit" name="LE_ip">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>110</y>
-      <width>101</width>
+      <y>120</y>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="LE_nomSite">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>70</y>
-      <width>181</width>
-      <height>21</height>
-     </rect>
+    <property name="inputMask">
+     <string>009.009.009.009;_</string>
+    </property>
+    <property name="maxLength">
+     <number>15</number>
     </property>
     <property name="frame">
      <bool>true</bool>
     </property>
-    <property name="dragEnabled">
+    <property name="clearButtonEnabled">
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QLineEdit" name="LE_nom">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>20</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CB_collecteur">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>50</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_modifier">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>140</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Modifier</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_supprimer">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>140</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Supprimer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="QL_titre2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>10</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri Light</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Modifier ou supprimer la configuration d'un collecteur</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_nomModifie">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>60</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_ipModifie">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>90</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_maj">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>140</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mettre à jour</string>
+    </property>
+   </widget>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>850</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

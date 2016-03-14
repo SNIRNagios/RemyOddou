@@ -6,7 +6,8 @@
 
 #permettre à qmake d'ajouter les chemins d'inclusion des en-têtes et les libs pour XML
 QT += xml
-QT       += core gui
+QT += core gui
+QT += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

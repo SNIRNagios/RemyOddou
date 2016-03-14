@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <collecteur id="1" nom="Mairie" adresse="127.0.0.1"/>
-    <collecteur id="2" nom="Médiathèque" adresse="127.0.0.3"/>
+    <collecteur id="1" nom="Mairie" ip="127.0.0.1"/>
+    <collecteur id="2" nom="Mairie 2" ip="127.0.0.2"/>
+    <collecteur id="3" nom="Médiatèque" ip="127.0.0.1"/>
+    <collecteur id="4" nom="Médiatèque" ip="127.0.0.2"/>
 </configuration>

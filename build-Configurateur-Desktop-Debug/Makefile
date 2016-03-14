@@ -214,6 +214,7 @@ Makefile: ..\Configurateur\Configurateur.pro C:\Qt\Qt5.5.0\5.5\msvc2013_64\mkspe
 		C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Widgets.prl \
 		C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Gui.prl \
 		C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Xml.prl \
+		C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Network.prl \
 		C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-msvc2013 "CONFIG+=debug" -o Makefile ..\Configurateur\Configurateur.pro
 C:\Qt\Qt5.5.0\5.5\msvc2013_64\mkspecs\features\spec_pre.prf:
@@ -357,6 +358,7 @@ C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/qtmaind.prl:
 C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Widgets.prl:
 C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Gui.prl:
 C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Xml.prl:
+C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Network.prl:
 C:/Qt/Qt5.5.0/5.5/msvc2013_64/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -spec win32-msvc2013 "CONFIG+=debug" -o Makefile ..\Configurateur\Configurateur.pro
