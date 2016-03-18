@@ -18,7 +18,7 @@ void Configurateur::Add(QString nom, QString ip)
       int k=1;
 
       //Ouverture du fichier et choix du mode d'ouverture
-      if (fichier->open(QFile::ReadOnly | QFile::Text)) // Ouverture du fichier XML en lecture seule et en mode texte
+      if (fichier->open(QFile::ReadOnly | QFile::Text)) // Ouverture du fichier XML en lecture seule et en mode texte.
       {
 
       reader.setDevice(fichier); // Initialise l'instance reader avec le flux XML venant de file
@@ -100,7 +100,6 @@ void Configurateur::Add(QString nom, QString ip)
              <collecteur id="1" nom="local" ip="127.0.0.1"/>
          </Configuration>
  */
-
      }
 
      vectorSite.clear();

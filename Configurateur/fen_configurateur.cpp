@@ -15,15 +15,14 @@ FEN_Configurateur::~FEN_Configurateur()
     delete configurateur;//On libère la case mémoire
 }
 
-void FEN_Configurateur::on_PB_sauvegarder_clicked()
+void FEN_Configurateur::on_PB_ok_clicked()
 {
   //Fonction vérifiant si l'adresse saisie est correcte
     if(IP.setAddress(ui->LE_ip->text()))
     {
        ipSaisie= ui->LE_ip->text();// Récupération de l'adresse IP..
        nomSaisie= ui->LE_nom->text();// Récupération du nom du site distant
-       configurateur->Add(nomSaisie,ipSaisie);// A spécifier
-       ui->CB_collecteur->addItem(nomSaisie+" - "+ipSaisie);
+       configurateur->Add(nomSaisie,ipSaisie);// A spécifier    
     }
     else
     {
@@ -39,7 +38,7 @@ void FEN_Configurateur::on_PB_sauvegarder_clicked()
 }
 
 
-void FEN_Configurateur::on_PB_annuler_clicked()
+void FEN_Configurateur::on_PB_cancel_clicked()
 {
     //A faire
     ui->LE_ip->setText("");

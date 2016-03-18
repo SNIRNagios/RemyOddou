@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_FEN_Configurateur_t {
     QByteArrayData data[4];
-    char stringdata0[67];
+    char stringdata0[57];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,13 +30,13 @@ struct qt_meta_stringdata_FEN_Configurateur_t {
 static const qt_meta_stringdata_FEN_Configurateur_t qt_meta_stringdata_FEN_Configurateur = {
     {
 QT_MOC_LITERAL(0, 0, 17), // "FEN_Configurateur"
-QT_MOC_LITERAL(1, 18, 25), // "on_PB_sauvegarder_clicked"
-QT_MOC_LITERAL(2, 44, 0), // ""
-QT_MOC_LITERAL(3, 45, 21) // "on_PB_annuler_clicked"
+QT_MOC_LITERAL(1, 18, 16), // "on_PB_ok_clicked"
+QT_MOC_LITERAL(2, 35, 0), // ""
+QT_MOC_LITERAL(3, 36, 20) // "on_PB_cancel_clicked"
 
     },
-    "FEN_Configurateur\0on_PB_sauvegarder_clicked\0"
-    "\0on_PB_annuler_clicked"
+    "FEN_Configurateur\0on_PB_ok_clicked\0\0"
+    "on_PB_cancel_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,8 +70,8 @@ void FEN_Configurateur::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         FEN_Configurateur *_t = static_cast<FEN_Configurateur *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_PB_sauvegarder_clicked(); break;
-        case 1: _t->on_PB_annuler_clicked(); break;
+        case 0: _t->on_PB_ok_clicked(); break;
+        case 1: _t->on_PB_cancel_clicked(); break;
         default: ;
         }
     }

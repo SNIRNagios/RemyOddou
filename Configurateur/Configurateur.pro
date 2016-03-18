@@ -17,9 +17,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         fen_configurateur.cpp \
-    configurateur.cpp
+    configurateur.cpp \
+    fen_ajoutersite.cpp
 
 HEADERS  += fen_configurateur.h \
-    configurateur.h
+    configurateur.h \
+    fen_ajoutersite.h
 
-FORMS    += fen_configurateur.ui
+FORMS    += fen_configurateur.ui \
+    fen_ajoutersite.ui

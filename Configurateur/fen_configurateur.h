@@ -18,8 +18,8 @@ public:
     ~FEN_Configurateur();
 
 private slots:
-    void on_PB_sauvegarder_clicked();// Slot bouton sauvegarder
-    void on_PB_annuler_clicked();// Slot bouton annuler
+    void on_PB_ok_clicked();// Slot bouton sauvegarder
+    void on_PB_cancel_clicked();// Slot bouton annuler
 
 private:
     Ui::FEN_Configurateur *ui;
