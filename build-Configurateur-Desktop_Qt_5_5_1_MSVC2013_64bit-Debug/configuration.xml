@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <collecteur id="1" nom="Parc informatique -  Ecole" adresse="127.126.20.1"/>
-    <collecteur id="2" nom="Parc informatique -  Salle 123" adresse="127.126.20.3"/>
-    <collecteur id="3" nom="Local" adresse="127.0.0.1"/>
-    <collecteur id="4" nom="Local2" adresse="127.0.0.3"/>
+    <collecteur nom="Ecole" ip="127.0.0.1"/>
 </configuration>

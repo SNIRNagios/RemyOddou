@@ -14,8 +14,7 @@ void Configurateur::Add(QString nom, QString ip)
       //Affectation
       nomFichier="configuration.xml";
       fichier=new QFile(nomFichier);
-
-      int k=1;
+      k=1;
 
       //Ouverture du fichier et choix du mode d'ouverture
       if (fichier->open(QFile::ReadOnly | QFile::Text)) // Ouverture du fichier XML en lecture seule et en mode texte.
@@ -42,20 +41,23 @@ void Configurateur::Add(QString nom, QString ip)
                       //while(reader.isStartElement()==false)
                           //reader.readNext();
                   }
-
-                  if(reader.name() == "collecteur")
+                  if (reader.name()=="site")
                   {
-                        k++;
-                        id = reader.attributes().value("id").toString();
-                        vectorId.append(id);
+                      k++;
+                      nomSite= reader.attributes().value("nom").toString();//Lecture du nom du site
+                      vector_nomSite.append(nomSite);//Stockage du nom dans le vector
 
-                        nomLu = reader.attributes().value("nom").toString();
-                        vectorSite.append(nomLu);
+                     if(reader.name() == "collecteur")
+                     {
 
-                        ipLue = reader.attributes().value("ip").toString();
-                        vectorAdresse.append(ipLue);
+                        nomCollecteur = reader.attributes().value("nom").toString();//Lecture du nom du collecteur
+                        vector_nomCollecteur.append(nomCollecteur);//Stockage du nom dans le vector
 
-                   }
+                        ipCollecteur = reader.attributes().value("ip").toString();//Lecture de l'ip du collecteur
+                        vector_ipCollecteur.append(ipCollecteur);
+
+                     }
+                  }
           }
           reader.readNext(); // On va au prochain token
         }
@@ -64,9 +66,8 @@ void Configurateur::Add(QString nom, QString ip)
       }
 
     // QString::number(k);
-     vectorAdresse.append(ip);
-     vectorSite.append(nom);
-     vectorId.append(QString::number(k));
+     vector_ipCollecteur.append(ip);
+     vector_nomCollecteur.append(nom);
 
     // Création et ouverture du fichier XML ou seulement ouverture du fichier XML si le fichier existe déjà
     // Ouverture du fichier en écriture et en texte.
@@ -84,28 +85,30 @@ void Configurateur::Add(QString nom, QString ip)
 
      writer.writeStartElement("configuration");//<configuration>
 
+     writer.writeAttribute("site",);
+
+
      //for (initialisation; test de continuation; boucle)
-    for( int i=0; i < vectorId.size(); i++ )// size() Taille du tableau
+    for( int i=0; i < vector_nomCollecteur.size(); i++ )// size() Taille du tableau
      {
 
          writer.writeStartElement("collecteur");//<collecteur>
 
-         writer.writeAttribute("id",vectorId[i]);//Ajoute un attribut à l'élément collecteur
-         writer.writeAttribute("nom",vectorSite[i]);//Ajoute un nouvel attribut à l'élément collecteur
-         writer.writeAttribute("ip",vectorAdresse[i]);//Ajoute un autre attribut à l'élément collecteur
+         writer.writeAttribute("nom",vector_nomCollecteur[i]);//Ajoute un nouvel attribut à l'élément collecteur
+         writer.writeAttribute("ip",vector_ipCollecteur[i]);//Ajoute un autre attribut à l'élément collecteur
 
          writer.writeEndElement();//</collecteur>
  /*
          <Configuration>
-             <collecteur id="1" nom="local" ip="127.0.0.1"/>
+         <site nom="Lycée">
+             <collecteur nom="local" ip="127.0.0.1"/>
+         </site>
          </Configuration>
  */
      }
 
-     vectorSite.clear();
-     vectorAdresse.clear();
-     vectorId.clear();
-
+     vector_nomCollecteur.clear();
+     vector_ipCollecteur.clear();
 
      writer.writeEndElement();//</configuration>
 

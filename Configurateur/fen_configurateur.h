@@ -2,8 +2,10 @@
 #define FEN_CONFIGURATEUR_H
 
 #include <QMainWindow>
-#include <QHostAddress>
 #include "configurateur.h"
+#include "fen_ajoutercollecteur.h"
+#include "fen_ajoutersite.h"
+
 
 namespace Ui {
 class FEN_Configurateur;
@@ -18,21 +20,12 @@ public:
     ~FEN_Configurateur();
 
 private slots:
-    void on_PB_ok_clicked();// Slot bouton sauvegarder
-    void on_PB_cancel_clicked();// Slot bouton annuler
+    void on_PB_ajouterSite_clicked();//Slot su bouton ajouter un site
+    void on_PB_ajouterCollecteur_clicked();
 
 private:
     Ui::FEN_Configurateur *ui;
-    QString ipSaisie;
-    QString nomSaisie;
-    Configurateur *configurateur;// Représente la classe Configurateur et va permettre l'accès aux attributs et aux méthodes de celle-ci
-    //On utilisera configurateur pour envoyer des données à la classe Configurateur
-    //Pointeur configurateur vers la classe Configurateur
-    QHostAddress IP;
-
-    QFile * fichier; //Objet QFile pour intéragir avec le fichier XML
-    QString nomFichier;// Nom du fichier XML traité
-
+    Configurateur *configurateur;//Pointeur * configurateur vers la classe Configurateur pour accèder aux attributs et méthodes de celle-ci
 
 
 };

@@ -4,8 +4,7 @@
 FEN_Configurateur::FEN_Configurateur(QWidget *parent) : QMainWindow(parent),ui(new Ui::FEN_Configurateur)
 {
     ui->setupUi(this);//Mettre en place les widgets sur la fenêtre
-    configurateur = new Configurateur(this);//Allocation dynamique, on créé l'objet de type Configurateur
-     //configurateur est un pointeur vers la classe Configurateur
+    configurateur = new Configurateur(this);//allocation dynamique
 
 }
 
@@ -15,41 +14,21 @@ FEN_Configurateur::~FEN_Configurateur()
     delete configurateur;//On libère la case mémoire
 }
 
-void FEN_Configurateur::on_PB_ok_clicked()
+
+
+void FEN_Configurateur::on_PB_ajouterSite_clicked()//Slot bouton ajouter un nouveau site
 {
-  //Fonction vérifiant si l'adresse saisie est correcte
-    if(IP.setAddress(ui->LE_ip->text()))
-    {
-       ipSaisie= ui->LE_ip->text();// Récupération de l'adresse IP..
-       nomSaisie= ui->LE_nom->text();// Récupération du nom du site distant
-       configurateur->Add(nomSaisie,ipSaisie);// A spécifier    
-    }
-    else
-    {
-        //Affichage d'un message d'alerte
-        QMessageBox alerte;
-        alerte.setWindowTitle("Attention");
-        alerte.setText("L'adresse IP saisie est invalide!");
-        alerte.setIcon(QMessageBox::Warning);
-        alerte.exec();
-    }
-
-
+    //Traitement et affichage de la fenêtre FEN_AjouterSite.ui
+    FEN_AjouterSite fenetre;
+    fenetre.setModal(true);
+    fenetre.exec();
 }
 
-
-void FEN_Configurateur::on_PB_cancel_clicked()
+void FEN_Configurateur::on_PB_ajouterCollecteur_clicked()
 {
-    //A faire
-    ui->LE_ip->setText("");
-    ui->LE_nom->setText("");
+    //Traitement et affichage de la fenêtre FEN_AjouterSite.ui
+   FEN_AjouterCollecteur fenetre;
+   fenetre.setModal(true);
+   fenetre.exec();
 }
-
-
-
-
-
-
-
-
 

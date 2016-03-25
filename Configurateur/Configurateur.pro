@@ -18,11 +18,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         fen_configurateur.cpp \
     configurateur.cpp \
-    fen_ajoutersite.cpp
+    fen_ajoutersite.cpp \
+    fen_ajoutercollecteur.cpp \
+    xmlcollecteur.cpp \
+    xmlsite.cpp
 
 HEADERS  += fen_configurateur.h \
     configurateur.h \
-    fen_ajoutersite.h
+    fen_ajoutersite.h \
+    fen_ajoutercollecteur.h \
+    xmlcollecteur.h \
+    xmlsite.h
 
 FORMS    += fen_configurateur.ui \
-    fen_ajoutersite.ui
+    fen_ajoutersite.ui \
+    fen_ajoutercollecteur.ui

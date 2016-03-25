@@ -19,13 +19,16 @@ private:
     QFile * fichier; //Objet QFile pour intéragir avec le fichier XML
     QString nomFichier;// Nom du fichier XML traité
 
-    QVector <QString> vectorId;//vector qui stocke les id lus
-    QVector <QString> vectorAdresse;// Tableau dynamique qui stockera temporairement les adresses IP
-    QVector <QString> vectorSite;// Tableau dynamique qui stockera temporairement le nom des sites distants
+    QVector <QString> vector_ipCollecteur;// Tableau dynamique qui stockera temporairement les adresses IP
+    QVector <QString> vector_nomCollecteur;// Tableau dynamique qui stockera temporairement le nom des sites distants
+    QVector <QString> vector_nomSite;
 
-    QString nomLu;//contient le nom du site récupéré dans le formulaire IHM
-    QString ipLue;//contient Adresse IP récupérée dans le formulaire IHM
-    QString id;//stocke l'id lu
+
+    QString nomSite;//contient le nom du site récupéré
+    QString nomCollecteur;//contient le nom du collecteur récupéré dans le formulaire IHM
+    QString ipCollecteur;//contient l'ip récupérée dans le formulaire IHM
+    int k;
+
 
 
 public:
